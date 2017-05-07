@@ -1,3 +1,5 @@
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -15,18 +17,71 @@
  *= require font-awesome
  */
 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome";
+
+
+ @media (min-width: 768px){
+   .navbar {
+     border-radius: 0; //圓角為0
+   }
+ }
+
  .jumbotron {
-   background-image:url('http://fullstack-public.oss-cn-qingdao.aliyuncs.com/2017-04-15-542213.png');
+   background-image:url("alex-jodoin-140654.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    padding-bottom: 110px;
  }
 
  .title {
-   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-   text-align: center;
-   margin-top: 200px;
-   margin-bottom: 80px;
+   background-color: rgba(250, 250, 250, 0.39); //背景顏色含透明度
+   max-width: 500px;//最大寬度
+   margin-top: 200px;//和頂部拉開距離
+   margin-bottom: 0;//這樣就可以緊接下面的描述文字
+   border-top-right-radius: 3px;//右上角圓邊
+   border-top-left-radius: 3px;//左上角圓邊
+
+ }
+
+ .jumbotron h1, .jumbotron .h1{
+   text-align: center;//文字左對齊
+   color: #222; //字體顏色
+
+   padding: 50px 20px 0; //上50px, 左右20px, 下0
+ }
+
+ .jumbotron p {
+     margin: 0;//上下左右margin為0
+     font-size: 26px; //字體大小
+     max-width: 500px; //最大寬度
+     background-color: rgba(250, 250, 250, 0.39);//背景顏色含透明度
+     padding: 20px ;//上右下左padding為20px
+     color: #222;//字體顏色
+
+     border-bottom-right-radius: 3px;//右下邊圓角
+     border-bottom-left-radius: 3px;//左下邊圓角
+
+ }
+
+ .btn-danger {
+     color: #fff;//字體顏色
+     background-color: #EF6C00; //背景顏色
+     border-color: #EF6C00;//邊框顏色
+ }
+
+ .btn-danger:hover {
+     background-color: #E65100;//鼠標放置在btn上的背景顏色
+     border-color:  #E65100;//鼠標放置在btn上的邊框顏色
+ }
+
+ .btn-lg, .btn-group-lg >.btn {
+     padding: 8px 16px; //通過padding來決定btn的大小
+     font-size: 20px;//btn文字大小
+     letter-spacing: 0; //調整文字間距
+     border-radius: 3px;//btn圓角
+     width: 200px;//這裡用指定寬度把btn拉得更長
  }
 
  .slogan {
@@ -71,7 +126,60 @@
  }
 
 
+ .navbar-default {
+   background-color: #212121; //背景顏色
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "font-awesome"
+   border-color: #212121;  //邊框色
+
+   margin-bottom: 0; //底部 margin 不撐開距離
+
+ }
+
+ .navbar-default .navbar-brand {
+   color: #EF6C00; //字體顏色
+
+   padding:  10px 15px; //上下10px, 左右15px
+   line-height: 30px; //文字行高
+  }
+
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color: #FF6F00; //鼠標放置在連結上的文字顏色
+
+    background-color: transparent; //鼠標放置在連結上的背景顏色，這裡設為透明
+  }
+
+  .navbar-default .navbar-nav > li > a{
+    color: #EF6C00;
+
+  }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #FF6F00;
+
+    background-color: #FFE0B2;
+
+  }
+
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:focus,
+  .navbar-default .navbar-nav > .open > a:hover {
+    background-color:  #FFE0B2;
+
+    color: #212121;
+
+  }
+
+  .navbar-brand > img {
+      display: inline-block; //圖片和連結文字顯示在同一行
+      margin-right: 10px; //圖片和連結文字拉開一點距離
+      width: 32px; //定制圖片寬度
+      height: 32px; //定制圖片高度
+  }
+
+  .container-fluid .jumbotron{
+    padding-bottom: 110px; // 內部的底部邊距，這樣按鈕不會很靠近底部了
+    margin: 0 -15px 20px; //頂部margin為0，因此可以直接接著導航欄；左右margin為-15，因此可以頂到瀏覽器邊緣（抵銷container-fluid的15px左右的padding);底部margin為20，會跟下面的內容撐開距離
+    border-radius: 0; //圓角為0
+  }

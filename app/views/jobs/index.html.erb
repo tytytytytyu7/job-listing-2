@@ -9,10 +9,10 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
       <li>
-        <%= link_to("按照薪資下限排序", jobs_path(:order => "by_lower_bound")) %>
+        <%= link_to("按照拯救規模下限排序", jobs_path(:order => "by_lower_bound")) %>
       </li>
       <li>
-        <%= link_to("按照薪資上限排序", jobs_path(:order => "by_upper_bound")) %>
+        <%= link_to("按照拯救規模排序", jobs_path(:order => "by_upper_bound")) %>
       </li>
       <li>
         <%= link_to("按照發表時間排序", jobs_path ) %>
@@ -24,9 +24,9 @@
 <table class="table table-boldered">
   <thead>
      <tr>
-         <td>職缺</td>
-         <td>薪資下限</td>
-         <td>薪資上限</td>
+         <td>任務</td>
+         <td>拯救規模（人）（下限）</td>
+         <td>拯救規模（人）（上限）</td>
          <td>刊登時間</td>
      </tr>
   </thead>

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Job Listing</title>
+    <title>Heroes</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="shortcut icon" href="/images/logo.ico">
   </head>
 
   <body>
 
       <div class="container-fluid">
+        <div class="row">
         <%= render "common/navbar" %>
-        <%= render "common/flashes" %>
+        </div>
+        <!-- <%= render "common/flashes" %> -->
         <%= yield %>
       </div>
 
